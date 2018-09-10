@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <link <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link <link rel="stylesheet" href="mycss.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body onload="makesaladmenu()">
+  <h3> Please Select the menu that you would like to have </h3>
+<div class=salad>
+
+
+<div id="saladdiv">
+
+  </div>
+
+</div>
+</body>
+</html>
+<script>
+function makesaladmenu(){
+  var eventcode = localStorage['theeventcode'];
+  localStorage.removeItem( 'theeventcode' ); // Clear the localStorage
+   // var eventcode = document.getElementById('eventcode').value;
+
+   console.log("this is from makesaldmenu "+eventcode);
+    $.ajax({
+
+      url:"https://api.mlab.com/api/1/databases/savefood/collections/menu?q={\"user\":\""+eventcode+ "\"}&apiKey=j5c1aUcBodWB3HVjKNqWV_rMK1TuqWqi"
+    }).done(function(data){
+      var output = '<form>';
+      $.each(data,function(key,data){
+            $.each(data.salads.split(","),function(key,data){
+              console.log(data);
+              output += '<input type="radio">'+data+'<br>';
+        //output += '</form>';
+      });
+      console.log("this is from makesaldmenu "+eventcode);
+            console.log(output+'</form>');
+    $("#saladdiv").html(output);
+  });
+    });
+  }
+</script>

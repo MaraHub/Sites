@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title> Test Mongo DB</title>
+<link <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src=".JS/main.js"></script>
+  </head>
+  <body >
+<div class="container" id="givecode">
+  <h3> Please Give the event code</h3>
+  <form id="menu-form" method="post">
+
+    <div class="form-group">
+      <label>Event Code</label>
+      <input type="text"  class="form-control" id="eventcode" placeholder="">
+    <!-- <small id="help" class="form-text text-muted">Please seperate by comma</small> -->
+    </div>
+<input type="button" id = "sb" value="submit" class="btn btn-primary" onclick="ggg()"/>
+  <!-- <button type="submit" class="btn btn-primary" onclick="select-menu-form.html">Submit</button> -->
+</form>
+<script>
+// Set the variable
+function ggg(){
+localStorage.setItem( 'theeventcode', document.getElementById('eventcode').value );
+window.location.assign('../menu-submit-guest/select-menu-form.html');
+// /savefood/sign-event-code/menu-submit-guest/select-menu-form.html 
+}
+</script>
+</div>
+
+  </body>
+
+
+</html>

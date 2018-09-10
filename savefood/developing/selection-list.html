@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+      <meta charset="utf-8">
+      <script src="https://code.jquery.com/jquery-1.6.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link href="selection-list.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- This is the way with the list -->
+<h2> Παρακαλώ Επιλέξτε τη Σαλάτα της προτίμησης σας </h2>
+<ul>
+<li> Χωριάτικη Σαλάτα </li>
+<li> Chef </li>
+</ul>
+
+
+<!-- This is the way with the divs -->
+<div class="list">
+<div class="itemnotselected" id="i1"> <p>Χωριάτικη Σαλάτα</p> </div>
+<div class="itemnotselected" id="i2"> <p>Chef</p> </div>
+</div>
+</html>
+
+
+
+<script>
+// $(".itemnotselected").on("click",
+//     function() {
+//         $(this).removeClass('itemnotselected').addClass('itemselected');
+//         $(this).removeClass('itemselected').addClass('itemnotselected');
+//       }
+//
+//   )
+
+$(".itemnotselected").toggle(
+function() {
+
+    $(this).removeClass('itemnotselected').addClass('itemselected');
+},
+function() {
+
+    $(this).removeClass('itemselected').addClass('itemnotselected');
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- $.(document).ready(function(){
+$(".item").on("click", function() {
+    $(this).css("background", "red");
+});} -->

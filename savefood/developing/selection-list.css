@@ -1,0 +1,13 @@
+.itemnotselected{
+  background-color: green;
+  padding: 10px;
+}
+.itemselected{
+  background-color: red;
+  padding: 10px;
+}
+
+
+p {
+  color:white;
+}
