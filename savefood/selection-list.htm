@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
+<!-- saved from url=(0057)http://localhost/savefood/developing/selection-list.html# -->
+<html class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-      <meta charset="utf-8">
-      <script src="https://code.jquery.com/jquery-1.6.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <link href="selection-list.css" rel="stylesheet" type="text/css">
+      
+      <script src="./selection-list_files/jquery-1.6.js"></script>
+      <link href="./selection-list_files/css" rel="stylesheet">
+      <link href="./selection-list_files/selection-list.css" rel="stylesheet" type="text/css">
 </head>
 
 
 
-<!-- This is the way with the divs -->
 
+<!-- This is the way with the divs -->
+<body data-gr-c-s-loaded="true"><div header="">
 <h2> PLease Select the Salad of your preference</h2>
 </div>
 
-<div class="selList">
+<div class="list2">
 <div class="itemnotselected" id="i1"> <p>Χωριάτικη Σαλάτα</p> </div>
 <div class="itemnotselected" id="i2"> <p>Chef</p> </div>
 </div>
 
-<div class="nextButton" id="button">Sumbit</div>
+<a class="button" id="button">Sumbit</a>
 
-</html>
 
 
 
@@ -43,10 +43,9 @@ $(function() {
       $("#button").click( function()
            {
              // alert('button clicked');
-             var numselections = $('.itemselected').length;
-             console.log(numselections);
-             console.log(document.getElementById("i1").value);
-             if (numselections>1){
+             var selections = $('.itemselected').length;
+             console.log(selections);
+             if (selections>1){
                alert('Please select less than 2');
              }
 
@@ -68,3 +67,4 @@ $(function() {
 $(".item").on("click", function() {
     $(this).css("background", "red");
 });} -->
+</body><style type="text/css" id="stylish_s_empty"></style></html>
